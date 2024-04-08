@@ -31,9 +31,6 @@ enum {
 
 %%
 
-int main() {
-    yyin = fopen("input.py", "r");
-    yylex();
-    fclose(yyin);
-    return 0;
+int yywrap(void){
+    return 1;
 }
