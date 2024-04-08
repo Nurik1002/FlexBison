@@ -7,7 +7,6 @@ enum {
     DEF, INT, IF, ELIF, ELSE, TRUE, FALSE, STR, AND, OR, INPUT, PRINT,
     IDENTIFIER, LET, NUM, SIGNS
 };
-
 %}
 
 %%
