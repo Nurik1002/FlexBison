@@ -463,18 +463,17 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "flexpython.l"
-#line 2 "flexpython.l"
+#line 1 "file.l"
+#line 2 "file.l"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-extern yylval;
 enum {
     DEF, INT, IF, ELIF, ELSE, TRUE, FALSE, STR, AND, OR, INPUT, PRINT,
     IDENTIFIER, LET, NUM, SIGNS
 };
+#line 476 "lex.yy.c"
 #line 477 "lex.yy.c"
-#line 478 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -691,10 +690,10 @@ YY_DECL
 		}
 
 	{
-#line 12 "flexpython.l"
+#line 11 "file.l"
 
 
-#line 698 "lex.yy.c"
+#line 697 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -753,85 +752,85 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 14 "flexpython.l"
+#line 13 "file.l"
 { return DEF;     }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 15 "flexpython.l"
+#line 14 "file.l"
 { return INT;     }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 16 "flexpython.l"
+#line 15 "file.l"
 { return IF;      }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 17 "flexpython.l"
+#line 16 "file.l"
 { return ELIF;    }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 18 "flexpython.l"
+#line 17 "file.l"
 { return ELSE;    }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 19 "flexpython.l"
+#line 18 "file.l"
 { return TRUE;    }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 20 "flexpython.l"
+#line 19 "file.l"
 { return FALSE;   }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 21 "flexpython.l"
+#line 20 "file.l"
 { return STR;     }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 22 "flexpython.l"
+#line 21 "file.l"
 { return AND;     }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 23 "flexpython.l"
+#line 22 "file.l"
 { return OR;      }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 24 "flexpython.l"
+#line 23 "file.l"
 { return INPUT;   }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 25 "flexpython.l"
+#line 24 "file.l"
 { return PRINT;   }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 28 "flexpython.l"
-{ strcpy(yylval.str, yytext); return LET;       }
+#line 27 "file.l"
+{ strcpy(yylval.data, yytext); return LET;       }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 29 "flexpython.l"
-{ strcpy(yylval.str, yytext); return NUM;       }
+#line 28 "file.l"
+{ strcpy(yylval.data , yytext); return NUM;       }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 30 "flexpython.l"
+#line 29 "file.l"
 { strcpy(yylval.str, yytext); return SIGNS;     }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 32 "flexpython.l"
+#line 31 "file.l"
 ECHO;
 	YY_BREAK
-#line 835 "lex.yy.c"
+#line 834 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1836,7 +1835,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 32 "flexpython.l"
+#line 31 "file.l"
 
 
 int yywrap(void){

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-extern yylval;
+#include "file.y"
 enum {
     DEF, INT, IF, ELIF, ELSE, TRUE, FALSE, STR, AND, OR, INPUT, PRINT,
     IDENTIFIER, LET, NUM, SIGNS
@@ -25,8 +25,8 @@ enum {
 "print"   { return PRINT;   }
 
 
-[a-z]+     { strcpy(yylval.str, yytext); return LET;       }
-[0-9]+     { strcpy(yylval.str, yytext); return NUM;       }
+[a-z]+     { strcpy(yylval.data, yytext); return LET;       }
+[0-9]+     { strcpy(yylval.data , yytext); return NUM;       }
 [ * \ / + - % < > ! =< =! => ]  { strcpy(yylval.str, yytext); return SIGNS;     }
 
 %%
