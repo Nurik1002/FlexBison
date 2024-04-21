@@ -39,3 +39,15 @@ d = int(input("Day = "))
 m = int(input("Month  = "))
 y = int(input("Year = "))
 print(NextDate(d, m, y))
+
+a
+a = 7;
+b = 4;
+x = a + b;
+
+
+
+
+
+
+
