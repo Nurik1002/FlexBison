@@ -1,4 +1,4 @@
-def IsLeapYear(Y):
+    def IsLeapYear(Y):
     if y % 4 == 0 and y % 400 == 0 or y % 4 == 0 and y % 100 !=0:
         return True
     else:
@@ -14,6 +14,7 @@ def MonthDays(k,m,y):
             return 1 <= k <=31
     else:
         return False    
+        
 def NextDate(dd, mm, yy):
     kabisa  = IsLeapYear(yy)
     sana = MonthDays(dd,mm,yy)
@@ -22,7 +23,7 @@ def NextDate(dd, mm, yy):
         if mm == 2 and dd > 28+kabisa:
             mm += 1
             dd %= (28+kabisa)
-        elif (mm == 4 or mm == 6 or mm == 9 or mm == 11) and dd > 30:
+        elif mm == 4 or mm == 6 or mm == 9 or mm == 11 and dd > 30:
             mm += 1
             dd %= 30
         elif dd > 31:
@@ -32,18 +33,16 @@ def NextDate(dd, mm, yy):
             else:
                 mm +=1 
             dd %= 31
-        return "Next date is : " + str(dd) + ":" + str(mm) + ":" + str(yy)      
+        print(dd, mm,  yy)  
     else:
-        return "Incorrect date!!\n"
-d = int(input("Day = "))
-m = int(input("Month  = "))
-y = int(input("Year = "))
-print(NextDate(d, m, y))
+        print(0)
 
-a
-a = 7;
-b = 4;
-x = a + b;
+
+d = int(input())
+m = int(input())
+y = int(input())
+NextDate(d, m, y)
+
 
 
 

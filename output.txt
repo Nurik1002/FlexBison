@@ -1,0 +1,68 @@
+#include <stdio.h> 
+#include <stdlib.h>
+include <iostream> 
+
+bool IsLeapYear(int y)
+{
+if (  y % 4 == 0 &&   y % 400 == 0 ||   y % 4 == 0 &&  y % 100 != 0){
+	return true;
+}
+else 
+{
+	return false;
+}
+}
+void MonthDays( int k, int m, int y)
+{
+bool kabisa = IsLeapYear(y);
+if (1 <= m <= 12){
+if ( m == 2){
+	return 1 <= k <= 28 + kabisa;
+}
+elif (  m == 4 ||   m == 6 ||   m == 9 ||  m == 11){
+return 1<=k<=30;
+}
+else 
+{
+return 1<=k<=31;
+}
+else 
+{
+	return false;
+}
+}
+void NextDate( int dd, int mm, int yy)
+{
+bool kabisa = IsLeapYear(yy);
+bool sana = MonthDays(dd, mm, yy);
+if (sana){
+dd+=1; if (  mm == 2 && dd>28+kabisa){
+mm+=1; dd%=(28+kabisa); 
+}
+elif (  mm == 4 ||   mm == 6 ||   mm == 9 ||   mm == 11 && dd>30){
+mm+=1; dd%=30;
+ }
+elif (dd>31){
+if ( mm == 12){
+mm = 1;
+yy+=1; else 
+{
+mm+=1; dd%=31;
+ cout << dd << '.' << mm << '.' << yy;
+}
+else 
+{
+cout << 0;
+}
+}
+int main()
+{
+	int d;
+	cin >> d;
+	int m;
+	cin >> m;
+	int y;
+	cin >> y;
+NextDate(d, m, y);
+return 0;
+}
