@@ -35,7 +35,7 @@ gcc -Wall -Wno-implicit-function-declaration -o examp y.tab.c lex.yy.c
 ./examp
 
 ```
-This will run the analyzer on the sample_input.txt file and potentially output the results (depending on the analyzer's functionality).
+This will run the analyzer on the input.txt file and potentially output the results (depending on the analyzer's functionality).
 
 **Description**
 
