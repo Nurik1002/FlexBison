@@ -12,9 +12,9 @@ Installation:
 Clone the repository:
 
 ```git clone https://github.com/Nurik1002/FlexBison.git```
-Use code with caution.
-```content_copy```
+
 Navigate to the project directory:
+
 ```
 cd FlexBison
 Use code with caution.
