@@ -6,8 +6,13 @@ Getting Started
 Prerequisites:
 
 Flex
+
 Bison
+
 C Compiler (e.g., GCC)
+
+
+
 Installation:
 
 Clone the repository:
