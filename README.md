@@ -17,7 +17,9 @@ Installation:
 
 Clone the repository:
 
-```git clone https://github.com/Nurik1002/FlexBison.git```
+```
+git clone https://github.com/Nurik1002/FlexBison.git
+```
 
 Navigate to the project directory:
 
